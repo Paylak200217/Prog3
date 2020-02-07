@@ -33,6 +33,8 @@ kerpar1Arr = [];
 kerpar2Arr = [];
 
 
+
+weath = "summer";
 Grass = require("./Grass")
 GrassEater = require("./GrassEater")
 Gishatich = require("./Gishatich")
@@ -143,6 +145,32 @@ function addGishatich() {
 }
 
 
+function weather() {
+    if (weath == "winter") {
+        weath = "spring"
+    }
+    else if (weath == "spring") {
+        weath = "summer"
+    }
+    else if (weath == "summer") {
+        weath = "autumn"
+    }
+    else if (weath == "autumn") {
+        weath = "winter"
+    }
+    io.sockets.emit('weather', weath)
+}
+setInterval(weather, 5000);
+
+
+
+io.on('connection', function (socket) {
+    createObject(matrix);
+    socket.on("add grassEater", addGrassEater);
+    socket.on("add Kerpar2", addKerpar2 );
+    socket.on("add Gishatich", addGishatich);
+})
+
 var statistics = {};
 
 setInterval(function() {
@@ -156,9 +184,3 @@ setInterval(function() {
     })
 },1000)
 
-io.on('connection', function (socket) {
-    createObject(matrix);
-    socket.on("add grassEater", addGrassEater);
-    socket.on("add Kerpar2", addKerpar2 );
-    socket.on("add Gishatich", addGishatich);
-})
