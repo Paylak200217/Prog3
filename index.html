@@ -5,17 +5,20 @@
 	<meta charset="utf8">
 	<style>
         #legend {position: absolute;top: 0;right: 0;width: 800px;} .legend-color {width: 30px;height: 30px;} td {border: 1px solid black; font-size: 14px; padding-left: 5px;}
-    </style>
+        li{margin-bottom: 5px;} 
+        button{background-color:rgb(50, 205, 71);width:120px;color: beige;}
+        </style>
 </head>
 <body>
     <script src="socket.io/socket.io.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js"></script>
     <script src="client.js"></script>
 
-    <div>   
+    <div class="tools">   
+        <h1 style="color:rgb(50, 205, 71)">Events</h1>
         <ul>
             <li>
-                <button onclick="addGrassEater()">Add grass eater</button>
+                <button onclick="addGrassEater()">Add GrassEater</button>
             </li>
             <li>
                 <button onclick="addKerpar2()">Add Kerpar2</button>
