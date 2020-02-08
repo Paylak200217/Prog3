@@ -35,11 +35,11 @@ kerpar2Arr = [];
 
 
 weath = "summer";
-Grass = require("./Grass")
-GrassEater = require("./GrassEater")
-Gishatich = require("./Gishatich")
-Kerpar1 = require("./Kerpar1")
-Kerpar2 = require("./Kerpar2")
+Grass = require("./classes/Grass")
+GrassEater = require("./classes/GrassEater")
+Gishatich = require("./classes/Gishatich")
+Kerpar1 = require("./classes/Kerpar1")
+Kerpar2 = require("./classes/Kerpar2")
 
 
 function createObject(matrix) {
