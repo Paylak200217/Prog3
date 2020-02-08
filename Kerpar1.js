@@ -93,6 +93,12 @@ module.exports = class Kerpar1 extends LivingCreature {
             kerpar1Arr.push(kerpar1);
             this.energy = 10;
         }
+        if (weath == "winter") {
+			this.energy -= 5;		
+		}
+		if (weath == "summer") {
+			this.energy += 4;
+		}
     }
 
 }

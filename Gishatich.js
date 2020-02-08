@@ -87,6 +87,12 @@ mul() {
         gishatichArr.push(gishatich);
         this.energy = 10;
     }
+    if (weath == "winter") {
+        this.energy -= 5;		
+    }
+    if (weath == "summer") {
+        this.energy += 3;
+    }
 }
 
 }
